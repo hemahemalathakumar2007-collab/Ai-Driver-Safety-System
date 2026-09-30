@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Driver Safety System</title>
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            margin-bottom: 20px;
+        }
+
+        .eyebrow {
+            color: #00f2fe;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin: 5px 0;
+            font-size: 28px;
+        }
+
+        .sub {
+            color: #94a3b8;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Guide Box Styling */
+        .info-box {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-left: 4px solid #00f2fe;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .info-box h3 {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .info-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .info-box li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+
+        .info-box li::before {
+            content: "•";
+            color: #00f2fe;
+            font-size: 18px;
+            position: absolute;
+            left: 5px;
+            top: -2px;
+        }
+
+        /* Telegram Card Styling */
+        .telegram-card {
+            background-color: #121822;
+            border: 1px solid #00f2fe;
+            border-radius: 10px;
+            padding: 20px;
+            color: #ffffff;
+            max-width: 420px;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.15);
+            margin-bottom: 30px;
+        }
+
+        .notice-header {
+            color: #ffcc00;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .guide-steps {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            padding-left: 18px;
+            margin-bottom: 15px;
+        }
+
+        .guide-steps li {
+            margin-bottom: 6px;
+        }
+
+        .guide-steps code {
+            background: #1e293b;
+            color: #00f2fe;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group input {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 10px;
+            color: #ffffff;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #00f2fe;
+        }
+
+        .save-btn {
+            background: #00f2fe;
+            color: #121822;
+            font-weight: bold;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .save-btn:hover {
+            background: #38ef7d;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .badge.stopped { background: #ef4444; color: #fff; }
+        .badge.running { background: #22c55e; color: #fff; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <p class="eyebrow">AI-BASED DRIVER SAFETY</p>
+        <h1>Driver Drowsiness, Distraction  Alert &  Emergency SOS System</h1>
+        <p class="sub">Real-time monitoring dashboard</p>
+    </header>
+
+    <!-- Overview & How to Use (In Box Format) -->
+    <div class="info-box">
+        <h3>📌 திட்டத்தைப் பற்றிய வழிகாட்டி (About & How to Use)</h3>
+        <p>
+            இந்த அமைப்பானது ஓட்டுநரின் கவனச்சிதறல், தூக்கக் கலக்கம் மற்றும் கொட்டாவி விடுதல் போன்றவற்றை நிகழ்நேரத்தில் (Real-time) கண்காணித்து எச்சரிப்பதற்காக உருவாக்கப்பட்டது.
+        </p>
+        <p>
+            <b>பயன்படுத்தும் முறை:</b> கீழே கொடுக்கப்பட்டுள்ள பெட்டியில் உங்களது <b>Telegram Chat ID</b>-ஐ மட்டும் உள்ளிட்டு <b>Start Monitoring</b> கொடுக்கவும். (Chat ID எடுக்கும் வழிமுறைகள் கீழே கொடுக்கப்பட்டுள்ளன).
+        </p>
+        <ul>
+            <li><b>😴 தூக்கக் கலக்கம் (Drowsiness):</b> கண் மூடினால் குரல் எச்சரிக்கையுடன் (Audio Warning) டெலிகிராமிற்கு மெசேஜ் வரும்.</li>
+            <li><b>🥱 கொட்டாவி (Yawning):</b> சோர்வாகி கொட்டாவி விட்டால் உடனடியாகக் கண்டறிந்து எச்சரிக்கும்.</li>
+            <li><b>🚨 விபத்து எச்சரிக்கை (Accident SOS):</b> விபத்து நிகழும் சூழலில் நேரலை இருப்பிடத்துடன் (Live GPS Location) அவசரச் செய்தி அனுப்பப்படும்.</li>
+        </ul>
+        <div id="systemBadge" class="badge stopped">STOPPED</div>
+    </div>
+
+    <!-- Live Dashboard Grid Section -->
+    <section class="grid">
+        <div class="card camera-card">
+            <div class="card-title">
+                <span>Live Camera</span>
+                <span class="dot"></span>
+            </div>
+            <div class="camera">
+                <img id="video" src="/video" alt="Camera stream">
+                <div id="cameraText">Press START SYSTEM</div>
+            </div>
+            <div class="buttons">
+                <button onclick="startSystem()">START SYSTEM</button>
+                <button class="secondary" onclick="stopSystem()">STOP SYSTEM</button>
+                <button class="danger" onclick="manualSOS()">MANUAL SOS</button>
+            </div>
+        </div>
+
+        <div class="side">
+            <div class="card">
+                <h2>Safety Status</h2>
+                <div class="status-row"><span>Drowsiness</span><strong id="drowsiness">SAFE</strong></div>
+                <div class="status-row"><span>Yawning</span><strong id="yawning">SAFE</strong></div>
+                <div class="status-row"><span>Accident / Rollover</span><strong id="accident">SAFE</strong></div>
+                <div class="status-row"><span>Telegram SOS</span><strong id="sos">READY</strong></div>
+            </div>
+
+            <div class="card">
+                <h2>Detection Values</h2>
+                <div class="metric"><span>EAR</span><b id="ear">0.00</b></div>
+                <div class="metric"><span>MAR</span><b id="mar">0.00</b></div>
+                <div class="metric"><span>Motion Intensity</span><b id="motion">0.0</b></div>
+            </div>
+
+            <div class="card">
+                <h2>Emergency Location</h2>
+                <p id="location">Not available</p>
+                <p id="message">Press START SYSTEM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Chat ID Section -->
+    <section class="telegram-section">
+        <div class="telegram-card">
+            <div class="notice-header">
+                <span>📌</span> Telegram Chat ID எவ்வாறு பெறுவது? (Guide)
+            </div>
+
+            <ol class="guide-steps">
+                <li>Telegram ஆப் ஓபன் செய்து <code>@userinfobot</code> என தேடவும் (Search).</li>
+                <li>அந்த பாட் (Bot)-ஐ ஓபன் செய்து <b>/start</b> கொடுக்கவும்.</li>
+                <li>உடனடியாக உங்களின் <b>Id</b> (எடுத்துக்காட்டாக: <code>123456789</code>) திரையில் தோன்றும்.</li>
+                <li>அந்த ID-ஐ மட்டும் கீழே உள்ள பாக் ஸில் உள்ளீடு செய்து <b>Save Chat ID</b> கிளிக் செய்யவும்.</li>
+            </ol>
+
+            <div class="input-group">
+                <label for="telegram_chat_id" style="font-size: 13px; font-weight: bold; color: #00f2fe;">
+                    Emergency Telegram Chat ID:
+                </label>
+                <input type="text" id="telegram_chat_id" placeholder="Ex: 987654321">
+                <button class="save-btn" onclick="saveChatID()">Save Chat ID</button>
+            </div>
+            
+            <p id="status_msg" style="font-size: 12px; margin-top: 10px; text-align: center;"></p>
+        </div>
+    </section>
+
+    <footer>AI Driver Safety System • Local web dashboard</footer>
+</div>
+
+<script>
+async function post(url) {
+  await fetch(url, {method: "POST"});
+}
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+}
+
+async function startSystem() {
+  await post("/start");
+}
+
+async function stopSystem() {
+  await post("/stop");
+}
+
+async function manualSOS() {
+  if (confirm("Trigger manual SOS?")) {
+    await post("/sos");
+  }
+}
+
+async function updateStatus() {
+  try {
+    const r = await fetch("/status");
+    const s = await r.json();
+
+    setText("systemBadge", s.system);
+    setText("drowsiness", s.drowsiness);
+    setText("yawning", s.yawning);
+    setText("accident", s.accident);
+    setText("sos", s.sos);
+    setText("ear", Number(s.ear).toFixed(2));
+    setText("mar", Number(s.mar).toFixed(2));
+    setText("motion", Number(s.motion).toFixed(1));
+    setText("location", s.location);
+    setText("message", s.message);
+    setText("cameraText", s.message);
+
+    const badge = document.getElementById("systemBadge");
+    if (badge) {
+        badge.className = "badge " + (s.system === "RUNNING" ? "running" : "stopped");
+    }
+  } catch (e) {}
+}
+
+setInterval(updateStatus, 500);
+updateStatus();
+</script>
+
+</body>
+</html>
